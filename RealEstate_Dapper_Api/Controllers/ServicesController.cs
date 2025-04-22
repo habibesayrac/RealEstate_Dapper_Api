@@ -46,6 +46,5 @@ namespace RealEstate_Dapper_Api.Controllers
             var value = await _serviceRepository.GetService(id);
             return Ok(value);
         }
-
     }
 }
