@@ -29,7 +29,7 @@ namespace RealEstate_Dapper_Api.Repositories.WhoWeAreRepository
             }
         }
 
-        public async void DeleteWhoWeAreDetail(int id)     /*14.video 13.42 de kaldım*/
+        public async void DeleteWhoWeAreDetail(int id) 
         {
             string query = "Delete From WhoWeAreDetail Where WhoWeAreDetailID=@whoWeAreDetailID";
             var parameters = new DynamicParameters();
