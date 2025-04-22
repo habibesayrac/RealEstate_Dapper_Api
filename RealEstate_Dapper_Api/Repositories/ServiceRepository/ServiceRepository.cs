@@ -1,9 +1,7 @@
 ﻿using Dapper;
 using RealEstate_Dapper_Api.Dtos.ServiceDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
-using RealEstate_Dapper_Api.Models.Dtos.CategoryDtos;
 using RealEstate_Dapper_Api.Models.Dtos.ServiceDtos;
-using RealEstate_Dapper_Api.Models.Dtos.WhoWeAreDetailDtos;
 
 namespace RealEstate_Dapper_Api.Repositories.ServiceRepository
 {

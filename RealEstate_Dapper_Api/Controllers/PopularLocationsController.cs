@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using RealEstate_Dapper_Api.Models.Dtos.PopularLocationDtos;
 using RealEstate_Dapper_Api.Repositories.PopularLocationRepositories;
 
 namespace RealEstate_Dapper_Api.Controllers
@@ -18,6 +18,31 @@ namespace RealEstate_Dapper_Api.Controllers
         public async Task<IActionResult> PopularLocationList()
         {
             var value = await _popularLocationRepository.GetAllPopularLocationAsync();
+            return Ok(value);
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreatePopularLocation(CreatePopularLocationDto createPopularLocationDto)
+        {
+            _popularLocationRepository.CreatePopularLocation(createPopularLocationDto);
+            return Ok("Lokasyon Kısmı Başarılı Bir Şekilde Eklendi.");
+        }
+        [HttpDelete("{id}")]
+
+        public async Task<IActionResult> DeletePopularLocation(int id)
+        {
+            _popularLocationRepository.DeletePopularLocation(id);
+            return Ok("Lokasyon Kısmı Başarılı Bir Şekilde Silindi");
+        }
+        [HttpPut]
+        public async Task<IActionResult> UpdatePopularLocation(UpdatePopularLocationDto updatePopularLocationDto)
+        {
+            _popularLocationRepository.UpdatePopularLocation(updatePopularLocationDto);
+            return Ok("Lokasyon Kısmı Başarılı Bir Şekilde Güncellendi");
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPopularLocation(int id)
+        {
+            var value = await _popularLocationRepository.GetPopularLocation(id);
             return Ok(value);
         }
     }
