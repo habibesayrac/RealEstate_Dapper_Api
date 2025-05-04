@@ -1,4 +1,4 @@
-﻿namespace RealEstate_Dapper_Api.Models.Dtos.MessageDtos
+﻿namespace RealEstate_Dapper_UI.Dtos.MessageDtos
 {
     public class ResultInBoxMessageDto
     {
@@ -8,6 +8,5 @@
         public string Detail { get; set; }
         public DateTime SendDate { get; set; }
         public bool IsRead { get; set; }
-
     }
 }
