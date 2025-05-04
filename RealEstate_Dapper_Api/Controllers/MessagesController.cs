@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RealEstate_Dapper_Api.Models.Dtos.MessageDtos;
 using RealEstate_Dapper_Api.Repositories.MessageRepositories;
 
 namespace RealEstate_Dapper_Api.Controllers
