@@ -67,4 +67,3 @@ namespace RealEstate_Dapper_Api.Controllers
         }
     }
 }
-                            //71 
